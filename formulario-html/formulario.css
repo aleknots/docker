@@ -1,0 +1,119 @@
+/* Variáveis CSS para cores */
+:root {
+    --cor-primaria: #59429d;
+    --cor-secundaria: #380B61;
+    --cor-fundo: #F0F8FF;
+    --cor-botao: #59429d;
+    --cor-hover-botao: #CCBBFF;
+}
+
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--cor-fundo);
+    font-family: sans-serif;
+    color: var(--cor-primaria);
+    line-height: 1.6;
+    padding: 2% 1rem;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#titulo, #subtitulo {
+    color: var(--cor-secundaria);
+}
+
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.grupo {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.campo {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    display: block;
+}
+
+.campo input, .campo select, .campo textarea {
+    padding: 0.7em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.campo input:focus, .campo select:focus, .campo textarea:focus {
+    outline: none;
+    border-color: var(--cor-primaria);
+    box-shadow: 0 0 5px rgba(89, 66, 157, 0.5);
+}
+
+.radio-group, .checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.botao {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #fff;
+    background: var(--cor-botao);
+    border: none;
+    padding: 0.8em 1.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    align-self: flex-start;
+}
+
+.botao:hover {
+    background: var(--cor-hover-botao);
+    color: var(--cor-primaria);
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #888;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+    .grupo {
+        flex-wrap: nowrap;
+    }
+
+    .campo {
+        flex: 1;
+    }
+}

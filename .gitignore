@@ -1,0 +1,10 @@
+*.log
+*.pid
+.env
+.env.*
+.vscode/
+.idea/
+Thumbs.db
+**/volumes/logs/
+**/volumes/data/*.pid
+*.bkp-*

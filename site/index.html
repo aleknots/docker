@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Site Lab</title>
+</head>
+
+<body>
+    <header class="topbar">
+        <span class="brand">Docker Labs</span>
+        <span class="badge">Nginx</span>
+    </header>
+
+    <main class="page">
+        <section class="hero">
+            <p class="eyebrow">Static web server</p>
+            <h1>Nginx servindo um site estático em container</h1>
+            <p class="summary">
+                Um lab simples para praticar volume bind, porta publicada e execução com Docker Compose.
+            </p>
+        </section>
+
+        <section class="grid" aria-label="Recursos do lab">
+            <article>
+                <h2>Imagem oficial</h2>
+                <p>Usa `nginx:1.27-alpine`, uma imagem leve e comum para servir arquivos estáticos.</p>
+            </article>
+            <article>
+                <h2>Volume read-only</h2>
+                <p>Os arquivos locais são montados no container sem permissão de escrita.</p>
+            </article>
+            <article>
+                <h2>Porta local</h2>
+                <p>O Nginx fica disponível em `http://localhost:8080`.</p>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>

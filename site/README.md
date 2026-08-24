@@ -1,106 +1,106 @@
-# Nginx Website Lab
+# Lab de Website Nginx
 
-Static website lab served by official `nginx:1.27-alpine` Docker image.
+Lab de site estático servido pela imagem Docker oficial `nginx:1.27-alpine`.
 
-Designed for practicing Docker Compose, port binding, and mounting read-only host volumes.
+Projetado para praticar Docker Compose, mapeamento de portas e montagem de volumes somente leitura do host.
 
-## Files
+## Arquivos
 
-| File | Purpose |
+| Arquivo | Objetivo |
 | --- | --- |
-| `index.html` | Page structure and HTML layout |
-| `style.css` | Stylesheet and visual formatting |
-| `docker-compose.yml` | Nginx service configuration |
+| `index.html` | Estrutura da página e layout HTML |
+| `style.css` | Folha de estilo e formatação visual |
+| `docker-compose.yml` | Configuração do serviço Nginx |
 
-## Prerequisites
+## Pré-requisitos
 
 - Docker Engine
 - Docker Compose
 
-## How to Run
+## Como Executar
 
-Navigate into directory:
+Navegue até o diretório:
 
 ```bash
 cd site
 ```
 
-Launch container in background:
+Inicie o contêiner em segundo plano:
 
 ```bash
 docker compose up -d
 ```
 
-Access in browser:
+Acesse no navegador:
 
 ```text
 http://localhost:8080
 ```
 
-## Management Commands
+## Comandos de Gerenciamento
 
-View container logs:
+Visualizar logs do contêiner:
 
 ```bash
 docker compose logs -f
 ```
 
-Stop container:
+Parar contêiner:
 
 ```bash
 docker compose stop
 ```
 
-Start container:
+Iniciar contêiner:
 
 ```bash
 docker compose start
 ```
 
-Teardown container:
+Remover contêiner:
 
 ```bash
 docker compose down
 ```
 
-## How It Works
+## Como Funciona
 
-Docker Compose binds container port `80` to host port `8080`:
+O Docker Compose mapeia a porta `80` do contêiner para a porta `8080` do host:
 
 ```text
 8080:80
 ```
 
-The workspace directory is mounted into container at:
+O diretório do workspace é montado dentro do contêiner em:
 
 ```text
 /usr/share/nginx/html
 ```
 
-Nginx uses this directory to serve static content. Volume uses `:ro` mode (read-only inside container).
+O Nginx utiliza esse diretório para servir o conteúdo estático. O volume utiliza o modo `:ro` (somente leitura dentro do contêiner).
 
-## Troubleshooting
+## Solução de Problemas
 
-If default Nginx welcome page appears, recreate container:
+Se a página inicial padrão do Nginx aparecer, recrie o contêiner:
 
 ```bash
 docker compose down
 docker compose up -d
 ```
 
-Verify mounted files inside container:
+Verifique os arquivos montados dentro do contêiner:
 
 ```bash
 docker exec site ls -la /usr/share/nginx/html
 ```
 
-If host port `8080` is in use, modify port mapping in `docker-compose.yml`:
+Se a porta `8080` do host estiver em uso, altere o mapeamento de porta no `docker-compose.yml`:
 
 ```yaml
 ports:
   - "8081:80"
 ```
 
-## License
+## Licença
 
-Distributed under the [MIT License](../LICENSE).
+Distribuído sob a [Licença MIT](../LICENSE).

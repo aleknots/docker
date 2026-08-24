@@ -3,30 +3,30 @@
 [![YAML Lint & Syntax Validation](https://github.com/aleknots/docker/actions/workflows/yaml-lint.yml/badge.svg?branch=main)](https://github.com/aleknots/docker/actions/workflows/yaml-lint.yml)
 ![Docker](https://img.shields.io/badge/Docker-Containers-2496ED?logo=docker&logoColor=white)
 ![Docker Compose](https://img.shields.io/badge/Docker%20Compose-v2-2496ED?logo=docker&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-green.svg)
+![Licença](https://img.shields.io/badge/License-MIT-green.svg)
 
-Practical containerization templates, multi-service Docker Compose environments, web server demonstrations, and container management reference guides.
+Modelos práticos de conteinerização, ambientes multi-serviços com Docker Compose, demonstrações de servidores web e guias de referência para gerenciamento de contêineres.
 
-## What You'll Find Here
+## O Que Você Encontrará Aqui
 
-- Hands-on example projects for learning and validating Docker concepts.
-- Demonstrations of containerized application executions.
-- Usage examples with official web server images such as `nginx` and `httpd`.
-- `docker compose` configurations to simplify multi-container environments.
-- Static web applications served inside containers.
+- Projetos de exemplo práticos para aprendizado e validação de conceitos do Docker.
+- Demonstrações de execuções de aplicações em contêineres.
+- Exemplos de uso com imagens de servidores web oficiais como `nginx` e `httpd`.
+- Configurações do `docker compose` para simplificar ambientes multi-contêineres.
+- Aplicações web estáticas servidas dentro de contêineres.
 
-## Prerequisites
+## Pré-requisitos
 
-- Docker Engine installed.
-- Docker Compose available for projects utilizing `docker-compose.yml`.
+- Docker Engine instalado.
+- Docker Compose disponível para projetos que utilizam `docker-compose.yml`.
 
-## Contributions
+## Contribuições
 
-Contributions are welcome! Open issues or pull requests to:
-- Add new examples.
-- Improve existing configurations.
-- Update documentation and procedures.
+Contribuições são bem-vindas! Abra issues ou pull requests para:
+- Adicionar novos exemplos.
+- Melhorar configurações existentes.
+- Atualizar documentação e procedimentos.
 
-## License
+## Licença
 
-Distributed under the [MIT License](LICENSE).
+Distribuído sob a [Licença MIT](LICENSE).

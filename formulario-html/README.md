@@ -1,45 +1,45 @@
-## Overview
+## Visão Geral
 
-This project is a responsive HTML, CSS, and JavaScript web form hosted inside an Apache Docker container. The form collects user input and logs data to the browser console, designed for easy adaptation to backend integration APIs.
-
-***
-
-## File Structure
-
-- **index.html**: Main form web page.
-- **formulario.css**: Modern, responsive form styling stylesheet.
-- **script.js**: DOM manipulation and form data capture script.
-- **README.md**: Usage instructions.
-- **Public-HTML/**: Directory containing all web assets (HTML, CSS, JS) served by Apache.
+Este projeto é um formulário web responsivo em HTML, CSS e JavaScript hospedado dentro de um contêiner Docker Apache. O formulário coleta dados informados pelo usuário e registra as informações no console do navegador, projetado para fácil adaptação a APIs de integração backend.
 
 ***
 
-## Prerequisites
+## Estrutura de Arquivos
 
-- Docker Engine installed.
-- Directory `Public-HTML` in current workspace with form files (`index.html`, `formulario.css`, `script.js`).
+- **index.html**: Página web principal do formulário.
+- **formulario.css**: Folha de estilo moderna e responsiva do formulário.
+- **script.js**: Script de manipulação do DOM e captura de dados do formulário.
+- **README.md**: Instruções de uso.
+- **Public-HTML/**: Diretório contendo todos os recursos web (HTML, CSS, JS) servidos pelo Apache.
 
 ***
 
-## How to Run
+## Pré-requisitos
 
-### 1. Launch Apache Container
+- Docker Engine instalado.
+- Diretório `Public-HTML` no workspace atual contendo os arquivos do formulário (`index.html`, `formulario.css`, `script.js`).
+
+***
+
+## Como Executar
+
+### 1. Iniciar Contêiner Apache
 
 ```bash
 docker run -d --name apache-container -p 8000:80 -v $(pwd)/Public-HTML/:/usr/local/apache2/htdocs/ httpd
 ```
 
-- Starts Apache web server on host port 8000, serving files from `Public-HTML`.
+- Inicia o servidor web Apache na porta 8000 do host, servindo os arquivos a partir de `Public-HTML`.
 
-### 2. Access Form in Browser
+### 2. Acessar Formulário no Navegador
 
-Open:
+Acesse:
 
 ```
 http://localhost:8000
 ```
 
-### 3. Open Container Terminal Shell
+### 3. Abrir Shell Interativo no Contêiner
 
 ```bash
 docker exec -it apache-container /bin/bash
@@ -47,19 +47,19 @@ docker exec -it apache-container /bin/bash
 
 ***
 
-## Container Management
+## Gerenciamento do Contêiner
 
-- **Start**:
+- **Iniciar**:
 ```bash
 docker start apache-container
 ```
 
-- **Stop**:
+- **Parar**:
 ```bash
 docker stop apache-container
 ```
 
-- **Restart Policy**:
+- **Política de Reinicialização (Restart Policy)**:
 ```bash
 docker update --restart=always apache-container
 docker update --restart=no apache-container
@@ -67,21 +67,21 @@ docker update --restart=no apache-container
 
 ***
 
-## Form Features
+## Recursos do Formulário
 
-- Form submission captures field data including multi-selection checkboxes.
-- Submissions log data into browser developer console and display a confirmation alert.
-- Easily adapt submission logic to call a backend API by updating `script.js`.
-
-***
-
-## Customization & Styling
-
-- CSS uses CSS variables and responsive media queries for optimal mobile and desktop rendering.
-- Edit `formulario.css` to adjust colors, padding, and layout rules.
+- O envio do formulário captura dados dos campos, incluindo checkboxes de múltipla seleção.
+- Os envios registram informações no console do desenvolvedor do navegador e exibem um alerta de confirmação.
+- Adapte facilmente a lógica de envio para chamar uma API backend atualizando o `script.js`.
 
 ***
 
-## License
+## Personalização & Estilização
 
-Distributed under the [MIT License](../LICENSE).
+- O CSS utiliza variáveis CSS e media queries responsivas para renderização ideal em dispositivos móveis e desktop.
+- Edite o arquivo `formulario.css` para ajustar cores, espaçamentos e regras de layout.
+
+***
+
+## Licença
+
+Distribuído sob a [Licença MIT](../LICENSE).
